@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* class tag ------------------- */
+      .red {
+        color: #f33;
+      }
+
+      .yellow-bg {
+        background: #ffa;
+      }
+
+      .fancy {
+        font-weight: bold;
+        text-shadow: 4px 4px 3px #77f;
+      }
+
+      /* ID tag------------------- */
+      #IDheader {
+        background-color: rgb(255, 162, 218);
+      }
+
+      .inputBox {
+        border: 3px solid lightgray;
+      }
+
+      /* > 사용여부에 따라 스타일 */
+      /* .parent > .child {
+        background-color: lightblue;
+      } */
+
+      /* 
+      .child {
+        background-color: lightgreen;
+      } */
+
+      .parent > .child p {
+        background-color: rgb(21, 197, 255);
+        color: white;
+      }
+
+      .parent .grandchild p {
+        background-color: rgb(226, 176, 255);
+        color: gray;
+      }
+
+      /* none, block, inline------------------- */
+      .box1 {
+        display: none;
+        background-color: lightblue;
+      }
+
+      .box2 {
+        display: block;
+        background-color: lightgreen;
+      }
+
+      .box3 {
+        display: inline;
+        background-color: lightsalmon;
+      }
+
+      /* 가상선택자 ------------------- */
+
+      table {
+        border-collapse: collapse;
+        border: 2px solid rgb(140 140 140);
+        font-family: sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+
+      caption {
+        caption-side: bottom;
+        padding: 10px;
+        font-weight: bold;
+      }
+
+      thead,
+      tfoot {
+        background-color: rgb(228 240 245);
+      }
+
+      th,
+      td {
+        border: 1px solid rgb(160 160 160);
+        padding: 8px 10px;
+      }
+
+      td:last-of-type {
+        text-align: center;
+      }
+
+      tbody > tr:nth-of-type(even) {
+        background-color: rgb(237 238 242);
+      }
+
+      tfoot th {
+        text-align: right;
+      }
+
+      tfoot td {
+        font-weight: bold;
+      }
+
+      .table_wrap tbody tr:hover td {
+        background-color: rgb(255, 173, 21);
+      }
+
+      .table_wrap tbody tr th:hover {
+        background-color: rgb(164, 255, 111);
+      }
+
+      .table_wrap tbody tr td:hover {
+        background-color: rgb(164, 255, 111);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- class tag -->
+    <p>**class** ----------------------------</p>
+    <p class="red">class tag</p>
+    <p class="red yellow-bg">class tag + yellow-bg</p>
+    <p class="red fancy">class tag + fancy</p>
+
+    <!-- id tag -->
+    <p>**ID** ----------------------------</p>
+    <h2 id="IDheader">ID</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, optio
+      corrupti suscipit perferendis temporibus eveniet amet voluptate ea, et non
+      repudiandae? Modi deleniti praesentium doloremque nihil? Ipsam ea odio
+      amet!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, optio
+      corrupti suscipit perferendis temporibus eveniet amet voluptate ea, et non
+      repudiandae? Modi deleniti praesentium doloremque nihil? Ipsam ea odio
+      amet!
+    </p>
+    <br />
+
+    <p>** checked, enabled, disabled ** ----------------------------</p>
+    <form class="inputBox">
+      <h2>input box</h2>
+      <p>
+        <label>
+          <input type="checkbox" name="radio" value="checked" checked />
+          체크박스
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" name="radio" value="regular" /> 활성화
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" name="radio" value="disabled" disabled /> 비활성화
+        </label>
+      </p>
+    </form>
+    <br />
+
+    <p>** > 사용여부 ** ----------------------------</p>
+    <div class="parent">
+      <div class="child">
+        <p>첫 번째 자식</p>
+        <div class="grandchild">
+          <p>손자</p>
+        </div>
+      </div>
+      <div class="child">
+        <p>두 번째 자식</p>
+      </div>
+    </div>
+
+    <p>** none, block, inline ** ----------------------------</p>
+    <div class="box1">none</div>
+    <div class="box2">block</div>
+    <div class="box3">inline</div>
+    <br />
+
+    <p>** 가상 선택자를 활용하여 :hover ** ----------------------------</p>
+    <br />
+    <table class="table_wrap">
+      <thead>
+        <tr>
+          <th scope="col">이름</th>
+          <th scope="col">주소</th>
+          <th scope="col">나이</th>
+        </tr>
+      </thead>
+
+      <tbody class="tbody">
+        <tr>
+          <th scope="row" class="name">김철수</th>
+          <td>서울특별시 ooo ooo</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <th scope="row" class="name">이유리</th>
+          <td>광주광역시 ooo ooo</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <th scope="row" class="name">홍길동</th>
+          <td>부산광역시 ooo ooo</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <th scope="row" class="name">전우치</th>
+          <td>울산광역시 ooo ooo</td>
+          <td>36</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row" colspan="2">Average age</th>
+          <td>33</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

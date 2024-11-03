@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        background-color: aqua;
+        border: none;
+        font-size: 1rem;
+        font-family: Roboto;
+      }
+
+      div {
+        background-color: lightblue;
+        /* display: initial; */
+        font-size: 3rem;
+        border: 1px solid black;
+      }
+
+      /* initial ==> 실제 원래 속성 값. 
+      우선 순위
+      커스텀 스타일 -> 브라우저 스타일 -> initial 
+      inherit 
+      inherit yew => unset => inherit
+      color, font-family
+
+      inherit no => unset => initial
+      border, display
+      */
+
+      .btn-all {
+        all: unset;
+        background-color: revert;
+        padding: revert;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Button</button>
+    <div>
+      Div
+      <p>P</p>
+    </div>
+  </body>
+</html>

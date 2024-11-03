@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+
+      header {
+        color: #000;
+        font-weight: 900;
+        margin-left: 20px;
+        padding: 10px 0;
+        font-size: x-large;
+      }
+
+      nav {
+        padding: 10px;
+      }
+
+      nav a {
+        font-weight: 100;
+        color: #000;
+        margin: 0 10px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      main {
+        display: flex;
+        margin: 20px;
+      }
+
+      article {
+        flex: 3;
+        padding: 20px;
+        background: #f4f4f4;
+        margin-right: 20px;
+      }
+
+      .image {
+        width: 400px;
+        height: 600px;
+        object-fit: fill;
+      }
+
+      footer {
+        background: #004cff;
+        color: white;
+        padding: 60px 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <header>
+      <h1>My Simple Blog</h1>
+    </header>
+
+    <main>
+      <article>
+        <img class="image" src="./image/00a460f03a8f0.png" alt="검은색 의자" />
+      </article>
+      <article>
+        <img class="image" src="./image/41c388374f544.jpg" alt="야외 의자" />
+      </article>
+      <article>
+        <img class="image" src="./image/70d418db083a6.jpg" alt="살내 의자" />
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 copy right</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid lightgray;
+  height: 800px;
+
+  align-items: baseline;
+}
+
+.flex-item {
+  color: black;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.item1 {
+  background-color: lightblue;
+  padding-bottom: 3rem;
+}
+
+.item2 {
+  background-color: lightgoldenrodyellow;
+  padding-bottom: 4rem;
+}
+
+.item3 {
+  background-color: lightpink;
+  padding-bottom: 5rem;
+}

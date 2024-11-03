@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./0822.css" />
+    <style>
+      .c-button {
+        background-color: rgb(25, 69, 98);
+        color: white;
+        border: none;
+        height: 36px;
+        width: 74px;
+        border-radius: 18px;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 8px;
+        transition: box-shadow 0.15s;
+        vertical-align: top;
+      }
+
+      .c-button:hover {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="b-button">ButtonB</button>
+
+    <button class="c-button">ButtonC</button>
+
+    <button
+      class="d-button"
+      style="
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 32px;
+        border: none;
+        cursor: pointer;
+      "
+      onmouseover="this.style.backgroundColor='#45a049'; this.style.color='yellow';"
+      onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='white';"
+    >
+      ButtonD
+    </button>
+  </body>
+</html>

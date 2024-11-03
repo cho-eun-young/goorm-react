@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function calculateAge() {
+        const currentAge = parseInt(
+          document.querySelector("#currentAge").value
+        );
+        const year = parseInt(document.querySelector("#year").value);
+
+        if (
+          isNaN(currentAge) ||
+          isNaN(year) ||
+          currentAge === "" ||
+          year === ""
+        ) {
+          alert("숫자를 입력해 주세요.");
+        } else {
+          const currentAgeNum = parseInt(currentAge);
+          const yearNum = parseInt(year);
+
+          const futureAge = currentAgeNum + yearNum;
+
+          document.querySelector(
+            "#result"
+          ).innerText = `n년 후의 나이는 ${futureAge}세 입니다.`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input id="currentAge" type="text" placeholder="현재 나이 입력" />
+    <br />
+    <br />
+    <input id="year" type="text" placeholder="몇년 후 입력" />
+    <br />
+    <br />
+    <button onclick="calculateAge()">계산하기</button>
+    <h2 id="result"></h2>
+  </body>
+</html>

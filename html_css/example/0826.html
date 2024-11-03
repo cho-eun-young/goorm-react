@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        background-color: lightsalmon;
+        width: 100px;
+        margin: 30px;
+        padding: 50px;
+        color: white;
+        transition: all 2s;
+      }
+      .content:hover {
+        background-color: lightyellow;
+        width: 200px;
+        height: 200px;
+        rotate: 180deg;
+      }
+
+      div {
+        color: white;
+        text-align: center;
+        width: 100px;
+        height: 50px;
+        background-color: lightgray;
+        margin-bottom: 10px;
+        transition: width 2s;
+      }
+      div:nth-child(1) {
+        transition-timing-function: ease;
+      }
+      div:nth-child(2) {
+        transition-timing-function: linear;
+      }
+      div:nth-child(3) {
+        transition-timing-function: ease-in;
+      }
+      div:nth-child(4) {
+        transition-timing-function: ease-out;
+      }
+      div:nth-child(5) {
+        transition-timing-function: ease-in-out;
+      }
+      div:hover {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">content</div>
+
+    <h3>transition-timing-function</h3>
+    <div>ease</div>
+    <div>linear</div>
+    <div>ease-in</div>
+    <div>ease-out</div>
+    <div>ease-in-out</div>
+  </body>
+</html>

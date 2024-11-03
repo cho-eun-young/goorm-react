@@ -1,0 +1,35 @@
+.box-container {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #669966;
+}
+
+.box-container div {
+  padding: 10px;
+  border: 1px solid green;
+  background-color: #ffdddd;
+}
+
+#static-box {
+  position: static;
+}
+
+#relative-box {
+  /* 자기 자신을 기준 */
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+#absolute-box {
+  /* 최상단 기준 */
+  position: absolute;
+  top: 20px;
+  right: 150px;
+}
+
+#fixed-box {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+}

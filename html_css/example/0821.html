@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .login_wrap {
+        margin: 0 auto;
+        padding: 20px;
+        width: 320px;
+        box-shadow: 0px 8px 6px -9px #666;
+      }
+
+      .login_form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        width: 300px;
+        margin-top: 5px;
+        padding: 10px;
+        border: 1px solid rgb(196, 196, 196);
+      }
+
+      .login_btn {
+        width: 100%;
+        margin: 30px 0 0 0;
+        border: none;
+        padding: 10px;
+        background-color: rgb(38, 114, 255);
+        color: white;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 로그인 -->
+    <div class="login_wrap">
+      <h2>로그인</h2>
+      <form class="login_form">
+        <div class="login_id">
+          <label for="uname"></label>
+          <input type="text" placeholder="ID" name="uname" required />
+        </div>
+        <div class="login_pw">
+          <label for="psw"></label>
+          <input type="password" placeholder="PW" name="psw" required />
+        </div>
+      </form>
+      <button class="login_btn">Login</button>
+    </div>
+
+    <!-- 회원가입 -->
+    <div class="login_wrap">
+      <h2>회원가입</h2>
+      <form class="login_form">
+        <div class="login_id">
+          <label for="uname"></label>
+          <input type="text" placeholder="아이디" required />
+        </div>
+        <div class="login_email">
+          <label for="uname"></label>
+          <input type="text" placeholder="이메일" required />
+        </div>
+        <div class="login_pw">
+          <label for="psw"></label>
+          <input type="password" placeholder="비밀번호" required />
+        </div>
+        <div class="login_pw">
+          <label for="psw"></label>
+          <input type="password" placeholder="비밀번호확인" required />
+        </div>
+      </form>
+      <button class="login_btn">회원가입</button>
+    </div>
+  </body>
+</html>
