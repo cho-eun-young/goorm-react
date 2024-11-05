@@ -1,6 +1,6 @@
 import React from "react";
 import { BsGithub } from "react-icons/bs";
-import styles from "./footer.module.scss";
+import styles from "./Footer.module.scss";
 const Footer = () => {
   return (
     <footer className={styles.footer}>

@@ -14,3 +14,5 @@ export const categoriesSlice = createSlice({
 export const { setActiveCategory } = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;
+
+// 41강 1:00:00
