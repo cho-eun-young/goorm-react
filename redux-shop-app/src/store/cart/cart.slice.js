@@ -34,7 +34,56 @@ export const cartSlice = createSlice({
       });
       localStorage.setItem("cartProducts", JSON.stringify(state.products));
     },
+
+    deleteFromCart: (state, action) => {
+      state.products = state.products.filter(
+        (item) => item.id !== action.payload
+      );
+      localStorage.setItem("cartProducts", JSON.stringify(state.products));
+    },
+
+    incrementProduct: (state, action) => {
+      state.products = state.products.map((item) =>
+        item.id === action.payload
+          ? {
+              ...item,
+              quantity: item.quantity + 1,
+              total: item.price * (item.quantity + 1),
+            }
+          : item
+      );
+      localStorage.setItem("cartProducts", JSON.stringify(state.products));
+    },
+
+    decrementProduct: (state, action) => {
+      state.products = state.products.map((item) =>
+        item.id === action.payload
+          ? {
+              ...item,
+              quantity: item.quantity - 1,
+              total: item.price * (item.quantity - 1),
+            }
+          : item
+      );
+    },
+
+    getTotalPrice: (state, action) => {
+      state.totalPrice = state.products.reduce(
+        (acc, item) => (acc = +item.total),
+        0
+      );
+    },
   },
 });
+
+export const {
+  setUserId,
+  removeUserId,
+  addToCart,
+  deleteFromCart,
+  incrementProduct,
+  decrementProduct,
+  getTotalPrice,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchProduct } from "../../store/products/product.slice";
 import styles from "./DetailPage.module.scss";
 import Loder from "../../components/loader/Loder";
+import { addToCart } from "../../store/cart/cart.slice";
 
 const DetailPage = () => {
   /**
@@ -24,6 +25,14 @@ const DetailPage = () => {
     dispatch(fetchProduct(productId));
   }, [productId]);
 
+  const { products } = useSelector((state) => state.cart);
+
+  const productMatching = products.some((el) => el.id === product.id);
+
+  const addItemCart = () => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <div className="page">
       {isLoading ? (
@@ -41,7 +50,12 @@ const DetailPage = () => {
             <p>{product.description}</p>
 
             <div>
-              <button>장바구니에 담기</button>
+              <button
+                disabled={productMatching}
+                onClick={() => !productMatching && addItemCart()}
+              >
+                {productMatching ? "장바구니에 담긴 제품" : "장바구니에 담기"}
+              </button>
 
               <Link to={"/cart"}>장바구니로 이동</Link>
             </div>
