@@ -1,9 +1,10 @@
 import React from "react";
 import { FiMenu } from "react-icons/fi";
-import { ButtonFill, Container } from "../../styles/styles";
+import { ButtonFill } from "../../styles/styles";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../../store/menu/menuSlice";
+import { toggleCreateNoteModal } from "../../store/modal/modalSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();

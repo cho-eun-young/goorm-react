@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   viewEditTagsModal: false,
   viewAddTagsModal: false,
-  viewCreateTagsModal: false,
-  viewFilterTagsModal: false,
+  viewCreateNoteModal: false,
+  viewFiltersModal: false,
 };
 
 const modalSlice = createSlice({
@@ -23,13 +23,13 @@ const modalSlice = createSlice({
     },
 
     toggleCreateNoteModal: (state, action) => {
-      state.viewCreateTagsModal = action.payload;
+      state.viewCreateNoteModal = action.payload;
     },
     toggleFiltersModal: (state, action) => {
-      state.viewFilterTagsModal = action.payload;
+      state.viewFiltersModal = action.payload;
     },
   },
 });
-export const { toggleCreateNoteModa, toggleTagsModal, toggleFiltersModal } =
+export const { toggleTagsModal, toggleCreateNoteModal, toggleFiltersModal } =
   modalSlice.actions;
 export default modalSlice.reducer;
